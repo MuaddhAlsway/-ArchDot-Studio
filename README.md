@@ -5,8 +5,10 @@ A modern, minimalist architecture brand website built with **HTML**, **CSS**, an
 ---
 
 ## 📸 Preview
+<img width="100%" alt="Screenshot 2025-06-21 134844" src="https://github.com/user-attachments/assets/2fe1318d-9d31-4378-a72b-214fc9a87bff" />
 
-![Archdot Landing Page Screenshot](img/preview.png) <!-- Replace with actual screenshot URL or path -->
+
+
 
 ---
 
@@ -77,9 +79,21 @@ const firebaseConfig = {
 - ✔️ Tablet
 - ✔️ Laptop/Desktop
 - ❌ Not optimized for mobile (by design)
-- 📬 Contact
+
+---
+# 📬 Contact
 
 Muaddh Alsway
 Front-End Developer & Visual Designer
-LinkedIn →
-GitHub →
+ 
+ 
+ <a href="https://github.com/MuaddhAlsway" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Github&logo=github&label=&color=black&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  />
+  </a>
+  <a href="https://mail.google.com/mail/muaddhalsway.com" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  />
+  </a>
+  <a href="https://www.linkedin.com/in/muaddh-alsway/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
+  </a>
+
