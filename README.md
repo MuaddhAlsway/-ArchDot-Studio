@@ -1,5 +1,4 @@
-# 🏗️ Archdot Landing Page
-
+# 🏗️ ArchDot | Architecture Studio Website
 A modern, minimalist architecture brand website built with **HTML**, **CSS**, and **JavaScript**. This project includes animated carousels, Firebase-powered forms, and clean responsive layout targeting **tablet and laptop devices**.
 
 ---
