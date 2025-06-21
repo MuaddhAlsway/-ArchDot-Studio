@@ -48,9 +48,9 @@ A modern, minimalist architecture brand website built with **HTML**, **CSS**, an
 ```
 📦archdot-landing-page
 ┣ 📂img # All image assets
-┣ 📜index.html # Main HTML file
-┣ 📜style.css # Custom styles
-┣ 📜script.js # Carousel, scroll, Firebase
+┣ 📜Home.html # Main HTML file
+┣ 📜Home.css # Custom styles
+┣ 📜Home.js # Carousel, scroll, Firebase
 ┗ 📜README.md # Project description
 ```
 
