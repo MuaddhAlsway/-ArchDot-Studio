@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login & Signup - Firebase</title>
+
+  <link rel="stylesheet" href="ArchDot.css">
+</head>
+<body>
+
+  <section class="FormSection">
+    <div class="BACKGROUND"></div>
+    <div class="FormArchDot">
+      <h4>Sign Out <img src="login/login-circle-line.svg" alt="Login Icon"></h4>
+
+      <form id="loginForm" onsubmit="event.preventDefault(); handleAuth();">
+        <label><img src="login/mail-open-fill.svg" alt="Email Icon"> Email address:</label>
+        <input type="email" id="email" placeholder="Write your email" required />
+
+        <label><img src="login/git-repository-private-line.svg" alt="Password Icon"> Password:</label>
+        <input type="password" id="password" placeholder="Write your password" required />
+
+       
+
+    
+        <button id="logoutBtn" style="margin-top: 20px; background: #e74c3c; color: white;">
+          Log Out</button>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+  <!-- Your Firebase Config -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDW2BWFp5EvQmfMPUvgNYaqmYde0S49uOI",
+      authDomain: "form-archdot.firebaseapp.com",
+      projectId: "form-archdot",
+      storageBucket: "form-archdot.appspot.com",
+      messagingSenderId: "614347302945",
+      appId: "1:614347302945:web:f3491281632234c7265b60"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    let isLogin = false;
+
+    function toggleForm() {
+      isLogin = !isLogin;
+      document.getElementById('form-title').innerText = isLogin ? 'Login' : 'Sign Up';
+      document.querySelector('button').innerText = isLogin ? 'Login' : 'Sign Up';
+      document.querySelector('.toggle').innerText = isLogin
+        ? "Don't have an account? Sign Up"
+        : "Already have an account? Login";
+    }
+
+    function handleAuth() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      if (!email || !password) {
+        alert("Please enter both email and password.");
+        return;
+      }
+
+      if (isLogin) {
+        auth.signInWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            alert("Login successful!");
+            console.log("Logged in:", userCredential.user.email);
+          })
+          .catch(error => alert(error.message));
+      } else {
+        auth.createUserWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            alert("Signup successful!");
+            console.log("Signed up:", userCredential.user.email);
+          })
+          .catch(error => alert(error.message));
+      }
+    }
+
+    function logoutUser() {
+      auth.signOut()
+        .then(() => {
+          alert("Logged out.");
+          console.log("User logged out.");
+        });
+    }
+
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        console.log("User is logged in:", user.email);
+      } else {
+        console.log("No user is logged in.");
+      }
+    });
+
+    const logoutBtn = document.getElementById('logoutBtn');
+
+logoutBtn.addEventListener('click', () => {
+  auth.signOut()
+    .then(() => {
+      alert('Logged out successfully.');
+      // Optionally clear input fields or redirect user
+      document.getElementById('email').value = '';
+      document.getElementById('password').value = '';
+      console.log('User logged out');
+    })
+    .catch((error) => {
+      console.error('Error logging out:', error);
+      alert('Error logging out: ' + error.message);
+    });
+});
+
+  </script>
+</body>
+</html>

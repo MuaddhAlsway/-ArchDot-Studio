@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ArchDot - Form</title>
+
+  <!-- Remixicon for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="ArchDot.css">
+</head>
+<body>
+  <section class="FormSection">
+    <div class="BACKGROUND"></div>
+    <div class="FormArchDot">
+      <h4>Log in <img src="login/login-circle-line.svg" alt="Login Icon"></h4>
+
+      <form id="loginForm">
+        <label><img src="login/mail-open-fill.svg" alt="Email Icon"> Email address:</label>
+        <input type="email" id="email" name="email" required placeholder="Write your email" />
+
+        <label><img src="login/git-repository-private-line.svg" alt="Password Icon"> Password:</label>
+        <input type="password" id="password" name="password" required placeholder="Write your password" />
+
+        <span class="forgot" id="forgotPassword" style="cursor:pointer; color:blue;">Forget Password?</span>
+
+        <button type="submit" id="loginBtn">Log in</button>
+
+        <span class="signup">First time?</span>
+        <h4 class="signin-link" id="goToSignUp" style="cursor:pointer; color:blue;">Sign in</h4>
+      </form>
+    </div>
+  </section>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDW2BWFp5EvQmfMPUvgNYaqmYde0S49uOI",
+      authDomain: "form-archdot.firebaseapp.com",
+      projectId: "form-archdot",
+      storageBucket: "form-archdot.appspot.com",
+      messagingSenderId: "614347302945",
+      appId: "1:614347302945:web:f3491281632234c7265b60"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    document.getElementById('btn').addEventListener('click', () => {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          alert('Login success: ' + userCredential.user.email);
+        })
+        .catch((error) => {
+          alert('Login error: ' + error.message);
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>
