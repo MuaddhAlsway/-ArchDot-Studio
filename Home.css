@@ -496,23 +496,23 @@ header a{
 /* Backgrounds and widths */
 .FirstITem1 {
   width: 374px;
-  background-image: url(ArchDot-Studio\ 6.jpg);
+  background-image: url('ArchDot-Studio\ 6.jpg');
 }
 .FirstITem2 {
   width: 374px;
-  background-image: url(ArchDot-Studio/p.1.jpg);
+  background-image: url('ArchDot-Studio/p.1.jpg');
 }
 .FirstITem3 {
   width: 374px;
-  background-image: url(ArchDot-Studio/p.2.jpg);
+  background-image: url('ArchDot-Studio/p.2.jpg');
 }
 .FirstITem4 {
   width: 374px;
-  background-image: url(ArchDot-Studio/ 5.jpg);
+  background-image: url('ArchDot-Studio/ 5.jpg');
 }
 .FirstITem5 {
   width: 373px;
-  background-image: url(ArchDot-Studio/ 7.jpg);
+  background-image: url('ArchDot-Studio/ 7.jpg');
 }
 
 /* Slight dark overlay */
@@ -597,7 +597,7 @@ header a{
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background-image: url('img/Picture-2.jpg');
+  background-image: url('ArchDot-Studio/Picture-2.jpg');
   background-size: 400% 300%;
   background-repeat: no-repeat;
 }
