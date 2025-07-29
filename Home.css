@@ -496,23 +496,23 @@ header a{
 /* Backgrounds and widths */
 .FirstITem1 {
   width: 374px;
-  background-image: url(img/Picture\ -\ 6.jpg);
+  background-image: url(ArchDot-Studio/Picture\ -\ 6.jpg);
 }
 .FirstITem2 {
   width: 374px;
-  background-image: url(img/p.1.jpg);
+  background-image: url(ArchDot-Studio/p.1.jpg);
 }
 .FirstITem3 {
   width: 374px;
-  background-image: url(img/p.2.jpg);
+  background-image: url(ArchDot-Studio/p.2.jpg);
 }
 .FirstITem4 {
   width: 374px;
-  background-image: url(img/Picture\ -\ 5.jpg);
+  background-image: url(ArchDot-Studio/Picture\ -\ 5.jpg);
 }
 .FirstITem5 {
   width: 373px;
-  background-image: url(img/Picture\ -\ 7.jpg);
+  background-image: url(ArchDot-Studio/Picture\ -\ 7.jpg);
 }
 
 /* Slight dark overlay */
@@ -611,7 +611,7 @@ header a{
   color: white;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                    url('img/Picture-2.jpg');
+                    url('ArchDot-Studio/Picture-2.jpg');
   background-size: 400% 300%;
   background-repeat: no-repeat;
 }
@@ -662,7 +662,7 @@ header a{
 
 .Cover {
   position: relative;
-  background-image: url(img/p.1.jpg);
+  background-image: url(ArchDot-Studio/p.1.jpg);
   width: 1869px;
   height: 350px;
   background-size: cover;
